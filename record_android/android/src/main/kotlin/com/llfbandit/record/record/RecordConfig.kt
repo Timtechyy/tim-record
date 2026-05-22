@@ -20,7 +20,6 @@ class RecordConfig(
   val echoCancel: Boolean = false,
   val noiseSuppress: Boolean = false,
   val useLegacy: Boolean = false,
-  val service: AndroidService? = null,
   val muteAudio: Boolean = false,
   val manageBluetooth: Boolean = true,
   val audioSource: Int = MediaRecorder.AudioSource.DEFAULT,
@@ -105,13 +104,6 @@ class RecordConfig(
         else -> AudioManager.MODE_NORMAL
       }
 
-      val serviceMap = map?.get("service") as Map<*, *>?
-      val service = if (serviceMap != null) {
-        AndroidService(serviceMap["title"] as String, serviceMap["content"] as String?)
-      } else {
-        null
-      }
-
       return RecordConfig(
         call.argument("path"),
         Utils.firstNonNull(call.argument("encoder"), "aacLc"),
@@ -123,7 +115,6 @@ class RecordConfig(
         Utils.firstNonNull(call.argument("echoCancel"), false),
         Utils.firstNonNull(call.argument("noiseSuppress"), false),
         Utils.firstNonNull(map?.get("useLegacy") as Boolean?, false),
-        service,
         Utils.firstNonNull(map?.get("muteAudio") as Boolean?, false),
         Utils.firstNonNull(map?.get("manageBluetooth") as Boolean?, true),
         audioSource,
@@ -138,11 +129,6 @@ class RecordConfig(
     }
   }
 }
-
-class AndroidService(
-  val title: String,
-  val content: String?,
-)
 
 enum class AudioEncoder(val value: String) {
   AacLc("aacLc"),
