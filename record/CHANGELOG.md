@@ -1,8 +1,29 @@
 ## 6.2.1
+__This version is the last before v7 which will raise SDK versions to Flutter 3.44/Dart 3.13.__
+
 * fix: Stop requesting for amplitude updates when recording is paused or stopped from native side.
 * chore: Code cleanup.
 * chore: Remove uuid package dependency.
 * chore: Updated transitive dependencies. See there for all related changes to dedicated platforms.
+
+* Android:
+    * fix: Potential `IndexOutOfBoundsException` for AAC ADTS streaming.
+    * chore: Many code improvements and cleanups.
+    * chore: Deprecate background Android service (will be removed in v7).
+* iOS:
+    * feat: Add `allowHapticsAndSystemSoundsDuringRecording` iOS option.
+    * fix: Fuzzy events firing for recording states.
+    * fix: AVAudioPCMBuffer frame capacity calculation.
+    * fix: Stay away from Flutter UI thread.
+    * fix: SPM description.
+    * chore: Code cleanup.
+    * chore: Update example project.
+* macOS:
+    * fix: Stay away from Flutter UI thread.
+    * fix: SPM description.
+    * chore: Code cleanup.
+* Linux:
+    * fix: Overriding the locale of `pactl` command for consistent parsing.
 
 ## 6.2.0
 * feat: Add `request` parameter to `hasPermission()` method to check permission status without requesting.

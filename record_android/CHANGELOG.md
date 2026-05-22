@@ -1,4 +1,5 @@
 ## 1.5.2
+* fix: Potential `IndexOutOfBoundsException` for AAC ADTS streaming.
 * chore: Many code improvements and cleanups.
 * chore: Deprecate background Android service.
 
