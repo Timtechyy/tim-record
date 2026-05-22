@@ -1,3 +1,7 @@
+## 2.0.0
+* feat: JS assets are now web platform-specific assets. No more js files in other platform builds.
+* chore: Updates minimum supported SDK version to Flutter 3.44/Dart 3.12.
+
 ## 1.3.0
 * feat: Add `request` parameter to `hasPermission()` method to check permission status without requesting.
 

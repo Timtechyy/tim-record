@@ -1,3 +1,6 @@
+## 2.0.0
+* chore: Updates minimum supported SDK version to Flutter 3.44/Dart 3.12.
+
 ## 1.0.7
 * fix: Crashes (on Flutter 3.35.1 only ?)
 

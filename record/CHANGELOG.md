@@ -1,3 +1,6 @@
+## 7.0.0
+* chore: Updates minimum supported SDK version to Flutter 3.44/Dart 3.12.
+
 ## 6.2.1
 __This version is the last before v7 which will raise SDK versions to Flutter 3.44/Dart 3.13.__
 
@@ -5,7 +8,6 @@ __This version is the last before v7 which will raise SDK versions to Flutter 3.
 * chore: Code cleanup.
 * chore: Remove uuid package dependency.
 * chore: Updated transitive dependencies. See there for all related changes to dedicated platforms.
-
 * Android:
     * fix: Potential `IndexOutOfBoundsException` for AAC ADTS streaming.
     * chore: Many code improvements and cleanups.

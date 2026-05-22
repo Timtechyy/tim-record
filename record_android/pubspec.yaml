@@ -1,11 +1,11 @@
 name: record_android
 description: Android specific implementation for record package called by record_platform_interface.
-version: 1.5.2
+version: 2.0.0
 homepage: https://github.com/llfbandit/record/tree/master/record_android
 
 environment:
-  sdk: ^3.5.0
-  flutter: ">=3.24.0"
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
 
 resolution: workspace
 
