@@ -1,4 +1,4 @@
-name: record_workspace
+name: tim_record_workspace
 
 environment:
   sdk: ^3.12.0
