@@ -88,7 +88,7 @@ class AudioRecorder with _AmplitudeMixin, _StateMixin, _StreamMixin {
 
   /// Pauses recording session.
   Future<String?> pause() {
-    return _safeCall(() {
+    return _safeCall(() async{
     final path = await  _platform.pause(_recorderId); 
     return path
     });
