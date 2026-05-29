@@ -53,7 +53,7 @@ abstract class RecordMethodChannelPlatformInterface {
   /// Pauses recording session.
   ///
   /// Note `Android`: Usable on API >= 24(Nougat). Does nothing otherwise.
-  Future<void> pause(String recorderId);
+  Future<String?> pause(String recorderId);
 
   /// Resumes recording session after [pause].
   ///
